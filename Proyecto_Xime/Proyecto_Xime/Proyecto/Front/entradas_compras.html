@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Buy ticktes</title>
+
+<script type="text/javascript">
+
+    function obtenerdatosform()
+    {
+
+var nombreevento = document.getElementsById("nombreevento") value;
+var nombre_usuario = parseFloat (document.getElementById("nombre_usuario").value);
+
+
+document.registro.nom.value=nombreevento;
+document.registro.nombre_usuario.value=nombre_usuario;
+
+
+    }
+
+
+
+</script>
+
+
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: aqua;
+}
+
+
+footer {
+    background-color: #07096c;
+    color: #a1afb6;
+    padding: 10px;
+    text-align: center;
+}
+h1 {
+    text-align: center;
+}
+form {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="submit"] {
+    margin-top: 2rem;
+    padding: 0.5rem 1rem;
+    background-color: #8c1392;
+    color: #fff;
+    border-radius: 0.25rem;
+    border: none;
+    cursor: pointer;
+}
+nav {
+        background-color: #30095f;
+        padding: 10px;
+        text-align: center;
+    }
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+</style>
+
+</head>
+<body>
+    <nav>
+        <a href="C:\Users\xau74707\OneDrive - Atresmedia Corporacion De Medios De Comunicacion SA\codigo_html\html_tfg_ximena\inicio_sesion_tfg.html">Acceso</a>
+        <a href="C:\Users\xau74707\OneDrive - Atresmedia Corporacion De Medios De Comunicacion SA\codigo_html\html_tfg_ximena\registro_usuarios.html">Registro</a>
+        <a href="C:\Users\xau74707\OneDrive - Atresmedia Corporacion De Medios De Comunicacion SA\codigo_html\html_tfg_ximena\entradas_compras.html">Compra Entradas</a>
+
+        
+    </nav>
+
+    <h1>Entradas</h1>
+    <form action="registrocompras" method="post">
+        <!--<input type="hidden" id="id_compra" name="id_compra" value="number">//
+        <!-- Generar automáticamente un ID de compra único -->
+
+        <script>
+            // Generar un número aleatorio al cargar la página
+            window.onload = function() {
+              // Generar un número aleatorio entre 1 y 1000
+              var numeroAleatorio = Math.floor(Math.random() * 1000) + 1;
+              // Mostrar el número en un elemento HTML con el id "numero"
+              document.getElementById("numero").innerText = numeroAleatorio;
+            };
+          </script>
+
+
+        <label for="nombreevento">Nombre evento :</label>
+        <input type="text" id="nombreevento" name="nombreevento" required><br><br>
+
+        <label for="nombre_usuario">Nombre Usuario:</label>
+        <input type="text" id="nombre_usuario" name="nombre_usuario" required><br><br>
+        
+        
+        
+        
+        
+        
+        <label for="metodod">Metodo de pago:</label>
+        <select id="metodo" name="metodo" required>
+            <option value="">--Seleccionar--</option>
+            <option value="efectivo">Efectivo</option>
+            <option value="tarjeta">Tarjeta</option>
+            <option value="bizum">Bizum</option>
+            <option value="transferencia">Transferencia</option>
+            <option value="PayPal">PayPal</option>
+           
+        </select><br><br>
+       
+		<label for="cantidad">Nª de entradas :</label>
+    	<input type="number" id="cantidad" name="cantidad" required><br><br>
+
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email"><br><br>
+
+        <label for="telefono">Telefono:</label>
+        <input type="text" id="telefono" name="telefono" required><br><br>
+
+
+        <p>
+            Antes de finalizar la comprar, por favor, introducir el codigo de reserva que aparece en la parte superior.
+        </p>
+
+        <label for="idcompra">ID Compra:</label>
+        <input type="text" id="idcompra" name="idcompra" required><br><br>
+        
+        <input type="submit" value="Comprar"onclick="obtenerdatosform()">
+    </form>
+    <footer>
+        <p>Copyright MUNDUS © 2024</p>
+    </footer>
+
+</body>
+</html>
